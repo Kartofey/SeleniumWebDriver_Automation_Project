@@ -17,7 +17,7 @@ def browser():
 def pytest_addoption(parser):
     parser.addoption('--browser_name', action='store', default="chrome",
                      help="Choose browser: chrome or firefox")
-    parser.addoption('--language', action='store', default="ru",
+    parser.addoption('--language', action='store', default="en",
                      help="Choose language: ru, en, es, etc.")
 
 # Фикстура включает в себя условия для выбора браузера и языка через командную строку
