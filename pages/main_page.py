@@ -9,8 +9,5 @@ class MainPage(BasePage):
         catalogue_link = self.browser.find_element(*MainPageLocators.CATALOGUE_LINK)
         catalogue_link.click()
 
-    def should_be_login_link(self):
-        assert self.is_element_present(*MainPageLocators.LOGIN_LINK), "Login link is not presented"
-
     def should_be_catalogue_link(self):
         assert self.is_element_present(*MainPageLocators.CATALOGUE_LINK), "Catalogue link is not presented"

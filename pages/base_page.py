@@ -18,9 +18,14 @@ class BasePage():
     def open(self):
         self.browser.get(self.url)
 
+# Переход на страницу авторизации
     def go_to_login_page(self):
         login_link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         login_link.click()
+
+# Проверка, что ссылка на страницу авторизации существует
+    def should_be_login_link(self):
+        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 
 # Проверка наличия элемента на странице
     def is_element_present(self, how, what):
