@@ -1,10 +1,9 @@
-# Импорт необходимых библиотек
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
-# Фикстура для открытия и закрытия браузера
+# Фикстура для открытия браузера в начале теста и закрытия в конце теста
 @pytest.fixture(scope="function")
 def browser():
     print("\nstart browser for test..")
